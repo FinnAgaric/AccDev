@@ -1,28 +1,94 @@
 /*
-Theme Name: BS4 Theme
+Theme Name: AccDev Theme
 Author: Finn Commerford
-Description: WordPress theme with Bootstrap 4
+Description: Accessible Dev WordPress Theme. Built with Bootstrap 4.
 Version: 1.0
 */
 
 
-/* root selector (optional). add things which will be repeated a lot (e.g. fonts, colours, sizes, etc.) */
-/* info: https://developer.mozilla.org/en-US/docs/Web/CSS/:root */
+
+/* root selector */
+
 :root {
-    --font:                    ;
+    --font:                    "Open Sans", sans-serif;
 
-    --base-size:               16px;
+    --regular:                 400;
+    --semi-bold:               600;
+    --bold:                    700;
+    --extra-bold:              800;
 
-    --font-regular:            400;
-    --font-bold:               700;
+    --blue:                  #00549E;
+    --lihgt-blue:            #BCD1E3;
+    --green:                 #50C878;
+    --white:                 #FAFAFA;
+    --light-grey:            #F2F2F2;
+    --grey:                  #CCCCCC;
+    --dark-grey:             #262626;
+    --black:                 #040303;
+
 }
-/* example of using a root style */
-p {
-    font-size: var(--base-size);
+
+
+
+/* START Global Styles */
+
+body {
+    font-family: var(--font);
 }
 
+section {
+    padding: 5rem 0rem;
+}
 
-/* hamburger menu icon */
+p, 
+li, 
+input, 
+label {
+    font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+}
+
+a,
+button {
+    transition: all 0.25s;
+    text-decoration: none!important;
+}
+
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(253,253,253)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
+
+.btn-green {
+    margin: 1rem 0rem 2rem 0rem;
+    background-color: var(--green);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: var(--semi-bold);
+    outline: none;
+    box-shadow: none!important;
+}
+.btn-green:hover {
+    color: var(--white);
+}
+
+
+
+/* END Global Styles */
+
+/* START Header */
+
+
+
+
+
+
+
+/* END Header */
