@@ -18,8 +18,9 @@ Version: 1.0
     --extra-bold:              800;
 
     --blue:                  #00549E;
-    --lihgt-blue:            #BCD1E3;
+    --light-blue:            #BCD1E3;
     --green:                 #50C878;
+    --light-green:           #D0EEDA;
     --white:                 #FAFAFA;
     --light-grey:            #F2F2F2;
     --grey:                  #CCCCCC;
@@ -40,20 +41,54 @@ section {
     padding: 5rem 0rem;
 }
 
+.page-content {
+    background-color: var(--white);
+}
+
 p, 
 li, 
 input, 
 label {
     font-size: 1rem;
+    color: var(--dark-grey);
+    margin-bottom: 0.5rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
+h1 {
+    font-size: 2.5rem;
+    font-weight: var(--bold);
+    margin-bottom: 0.5rem;
+    color: var(--black);   
+}
+h2 {
+    font-size: 2rem;
+    font-weight: var(--extra-bold);
+    margin-bottom: 1.5rem;
+    color: var(--blue);
+}
+h3 {
+    font-size: 1.5rem;
+    font-weight: var(--bold);
+    margin-bottom: 0.5rem;
+    color: var(--black);
+}
+h4 {
+    font-size: 1.25rem;
+    font-weight: var(--bold);
+    margin-bottom: 0.5rem;
+    color: var(--black);
+}
+h5 {
+    font-size: 1.1rem;
+    font-weight: var(--bold);
+    margin-bottom: 0.5rem;
+    color: var(--black);
+}
 h6 {
-
+    font-size: 1rem;
+    font-weight: var(--extra-bold);
+    margin-bottom: 0.5rem;
+    color: var(--black);
 }
 
 a,
@@ -67,16 +102,37 @@ button {
 }
 
 .btn-green {
-    margin: 1rem 0rem 2rem 0rem;
     background-color: var(--green);
-    color: var(--white);
+    color: var(--black);
     font-size: 1rem;
     font-weight: var(--semi-bold);
     outline: none;
     box-shadow: none!important;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
 }
 .btn-green:hover {
     color: var(--white);
+}
+.btn-blue {
+    background-color: var(--blue);
+    color: var(--light-grey);
+    font-size: 1rem;
+    font-weight: var(--semi-bold);
+    outline: none;
+    box-shadow: none!important;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+}
+.btn-blue:hover {
+    color: var(--white);
+}
+
+
+.card {
+    border: none;
+    background-color: var(--light-blue);
+    padding: 1rem;
 }
 
 
@@ -87,8 +143,127 @@ button {
 
 
 
+header .navbar {
+    background-color: var(--green);
+}
+header .navbar .container {
+    display: block;
+}
+header .navbar img {
+    width: 7rem;
+    padding-top: 1rem;
+}
+header nav {
+    justify-content: end!important;
+}
+header .nav-link {
+    color: var(--black);
+    font-weight: var(--semi-bold);
+    margin-left: 1.5rem;
+}
+header .front-page-banner {
+    padding: 7rem 0rem;
+    background-color: var(--white);
+}
+header .front-page-banner h1 {
+    color: var(--blue);
+    font-weight: var(--extra-bold);
+    font-size: 3.25rem;
+    margin-bottom: 0.75rem;
+}
+header .front-page-banner p {
+    font-size: 1.5rem;
+}
+header .front-page-banner hr {
+    border-top: solid 0.15rem var(--green);
+    margin: -0.75rem 41.5rem 0rem 13.5rem;
+}
+header .front-page-banner img {
+    width: 12rem;
+}
+header .inner-page-banner {
+    padding: 4rem 0rem;
+    background-color: var(--light-green);
+}
 
 
 
 
 /* END Header */
+
+/* START Front Page */
+
+
+
+.importance {
+    background-color: var(--light-grey);
+}
+.importance .card p {
+    font-size: 1.25rem;
+    margin-bottom: 0rem;
+}
+.importance .card .big {
+    font-size: 2.5rem;
+    font-weight: var(--bold);
+}
+
+
+
+/* END Front Page */
+
+/* START custom template styles */
+
+
+
+.colour-contrast-checker #result h3 {
+    font-size: 1.25rem;
+    font-weight: var(--regular);
+    text-decoration: underline;
+}
+.colour-contrast-checker .card a {
+    color: var(--black);
+    text-decoration: underline!important;
+}
+
+
+
+/* END custom template styles */
+
+/* START Footer */
+
+
+
+footer {
+    background-color: var(--dark-grey);
+    padding: 4rem 0rem 2rem 0rem;
+}
+footer img {
+    width: 8rem;
+    margin-bottom: 1.5rem;
+}
+footer p {
+    color: var(--grey);
+    margin-bottom: 0.5rem;
+}
+footer p:first-of-type {
+    color: var(--light-grey);
+}
+footer .navbar {
+    padding: 0rem;
+}
+footer .nav-link {
+    color: var(--white);
+    font-weight: var(--semi-bold);
+    margin: 0rem;
+    padding-top: 0rem;
+}
+footer .nav-link:hover {
+    color: var(--green);
+}
+
+
+
+
+
+/* END Footer */
+

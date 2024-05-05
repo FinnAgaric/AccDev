@@ -23,11 +23,16 @@
 
 <header>
 
-<section class="navbar">
-  <div class="container">
-    <div class="row">
-      <!-- collapsible mobile nav menu, visible md-down -->
-      <div class="col-sm-6 d-lg-none d-md-block">
+  <section class="navbar">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-3">
+          <img src="<?php bloginfo('template_directory');?>/images/AccDev_logo_blue.png" alt="AccDev Logo">
+        </div>
+
+        <!-- collapsible mobile nav menu, visible md-down -->
+        <div class="col-sm-6 d-lg-none d-md-block">
         <nav class="navbar navbar-toggleable-sm navbar-custom">
           <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -47,48 +52,63 @@
               ));
             ?>
         </nav>
-      </div>
+        </div>
 
-      <!-- desktop nav menu, visible lg-up -->
-      <div class="col-xl-9 col-lg-10 d-lg-block d-none">
-        <nav class="navbar navbar-expand-sm">
-          <!-- nav walker for desktop header menu -->
-          <?php
-            wp_nav_menu(array(
-              'menu'            => 'header-menu',
-              'theme_location'  => 'header-menu',
-              'container'       => 'div',
-              'container_id'    => 'bs4navbar',
-              'container_class' => '',
-              'menu_id'         => false,
-              'menu_class'      => 'navbar-nav',
-              'depth'           => 2,
-              'fallback_cb'     => 'bs4navwalker::fallback',
-              'walker'          => new bs4navwalker()
-            ));
-          ?>
-        </nav>
-      </div>
-      
-    </div>
-  </div>
-</section>
-
-
-<section class="header">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <!-- php conditions to display different header content depending on template -->
-        <?php if(is_front_page()) { ?>
-          <!-- front page specific header code here -->
-        <?php } 
-        else { ?>
-          <h1><?php the_title() ?></h1>
-        <?php } ?>
+        <!-- desktop nav menu, visible lg-up -->
+        <div class="col-9 d-lg-block d-none">
+          <nav class="navbar navbar-expand-sm">
+            <!-- nav walker for desktop header menu -->
+            <?php
+              wp_nav_menu(array(
+                'menu'            => 'header-menu',
+                'theme_location'  => 'header-menu',
+                'container'       => 'div',
+                'container_id'    => 'bs4navbar',
+                'container_class' => '',
+                'menu_id'         => false,
+                'menu_class'      => 'navbar-nav',
+                'depth'           => 2,
+                'fallback_cb'     => 'bs4navwalker::fallback',
+                'walker'          => new bs4navwalker()
+              ));
+            ?>
+          </nav>
+        </div>
+            
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- php conditions to display different header content depending on template -->
+  <?php if(is_front_page()) { ?>
+    <section class="front-page-banner">
+      <div class="container">
+        <div class="row">
+            <div class="col-9">
+              <h1><?php echo bloginfo('name'); ?></h1>
+              <p><?php echo bloginfo('description'); ?>.</p>
+              <hr>
+              <br>
+              <a href="<?php bloginfo('url'); ?>/about" class="btn btn-green" role="button" title="Learn more about AccDev">Learn More</a>
+            </div>
+            <div class="col-3 text-right">
+              <img src="<?php bloginfo('template_directory');?>/images/header_icon.png" alt="">
+            </div>
+        </div>
+      </div>
+    </section>
+  <?php } 
+  
+  else { ?>
+    <section class="inner-page-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1><?php the_title() ?></h1>
+          </div>
+        </div>
+      </div>
+    </section>
+  <?php } ?>
 
 </header>
